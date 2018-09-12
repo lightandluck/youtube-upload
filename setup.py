@@ -1,6 +1,10 @@
 #!/usr/bin/python
 """Upload videos to Youtube."""
-from distutils.core import setup
+import sys
+try:
+    from setuptools import setup
+except ImportError:
+    sys.exit("setuptools is required for building youtube-upload")
 
 setup_kwargs = {
     "name": "youtube-upload",
@@ -31,7 +35,8 @@ setup_kwargs = {
     },
     "install_requires":[
         'google-api-python-client',
-        'progressbar2'
+        'progressbar2',
+        'oauth2client'
     ]
 }
 
