@@ -1,9 +1,10 @@
 #!/usr/bin/python
 """Upload videos to Youtube."""
+import sys
 try:
     from setuptools import setup
 except ImportError:
-    from distutils.core import setup
+    sys.exit("setuptools is required for building youtube-upload")
 
 setup_kwargs = {
     "name": "youtube-upload",
