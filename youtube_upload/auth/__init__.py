@@ -4,7 +4,6 @@ import json
 
 import googleapiclient.discovery
 import oauth2client
-from oauth2client import file
 import httplib2 
 
 from youtube_upload import lib
