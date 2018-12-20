@@ -8,7 +8,7 @@ except ImportError:
 
 setup_kwargs = {
     "name": "youtube-upload",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "description": "Upload videos to Youtube",
     "author": "Arnau Sanchez",
     "author_email": "pyarnau@gmail.com",
