@@ -36,7 +36,7 @@ def get_resource(client_secrets_file, credentials_file, get_code_callback):
     """Authenticate and return a googleapiclient.discovery.Resource object."""
     get_flow = oauth2client.client.flow_from_clientsecrets
     flow = get_flow(client_secrets_file, scope=YOUTUBE_UPLOAD_SCOPE)
-    storage = oauth2client.file.Storage(credentials_file)
+    storage = file.Storage(credentials_file)
     credentials = _get_credentials(flow, storage, get_code_callback)
     if credentials:
         http = credentials.authorize(httplib2.Http())
